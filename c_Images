@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Images</title>
+</head>
+<body>
+
+    <h1>Profile Images</h1>
+
+    <p>Click on the images to go to the respective profiles:</p>
+
+    <a href="your_profile.html">
+        <img src="your_image.jpg" alt="Your Image" width="150" height="150">
+    </a>
+
+    <a href="friend_profile.html">
+        <img src="friend_image.jpg" alt="Friend's Image" width="150" height="150">
+    </a>
+
+</body>
+</html>

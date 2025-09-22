@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists Demonstration</title>
+</head>
+<body>
+
+    <h1>HTML Lists</h1>
+
+    <h2>1. Ordered List (Numbered List)</h2>
+    <p>This is an ordered list:</p>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+    <h2>2. Unordered List (Bulleted List)</h2>
+    <p>This is an unordered list:</p>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+
+    <h2>3. Nested Lists</h2>
+    <p>This is a nested list:</p>
+    <ul>
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrot</li>
+                <li>Spinach</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>4. Ordered List Inside Unordered List</h2>
+    <p>This is an ordered list inside an unordered list:</p>
+    <ul>
+        <li>Shopping List
+            <ol>
+                <li>Milk</li>
+                <li>Eggs</li>
+                <li>Cheese</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h2>5. Definition List</h2>
+    <p>This is a definition list:</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language used for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets used for styling web pages.</dd>
+        <dt>JavaScript</dt>
+        <dd>A programming language used to create dynamic and interactive web content.</dd>
+    </dl>
+
+</body>
+</html>
