@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML Table Example</title>
+</head>
+<body>
+
+    <h1>Student Grades Table</h1>
+
+    <table border="1">
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th colspan="2">Subjects</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Alice</td>
+            <td>Math</td>
+            <td>Science</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Bob</td>
+            <td colspan="2">English</td>
+        </tr>
+        <tr>
+            <td rowspan="2">103</td>
+            <td rowspan="2">Charlie</td>
+            <td>History</td>
+            <td>Geography</td>
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td>Physics</td>
+        </tr>
+    </table>
+
+</body>
+</html>
