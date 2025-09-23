@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Styles Example</title>
+
+    <!-- Internal Style -->
+    <style>
+        /* Selector: h2 (element selector)
+           Property: color
+           Value: green */
+        h2 {
+            color: green;
+        }
+
+        /* Selector: .internal-class (class selector)
+           Property: font-style
+           Value: italic */
+        .internal-class {
+            font-style: italic;
+        }
+    </style>
+
+    <!-- External Style -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1 style="color: red;">Inline Style Heading</h1>
+<!-- Inline Style -->
+<!-- Selector: h1 (element) applied inline
+     Property: color
+     Value: red -->
+
+<h2>This heading is styled with internal CSS</h2>
+
+<p class="internal-class">This paragraph uses internal CSS with a class selector.</p>
+
+<p class="external-class">This paragraph uses external CSS class.</p>
+
+</body>
+</html>
