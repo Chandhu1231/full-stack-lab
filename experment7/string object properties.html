@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>String Object Example</title>
+</head>
+<body>
+
+<button onclick="stringExample()">Run String Example</button>
+
+<script>
+  function stringExample() {
+    let str = "Hello, World!";
+
+    console.log("String length:", str.length);
+    console.log("Uppercase:", str.toUpperCase());
+    console.log("Lowercase:", str.toLowerCase());
+    console.log("Includes 'World'?", str.includes('World'));
+    console.log("Index of 'o':", str.indexOf('o'));
+    console.log("Slice (7,12):", str.slice(7,12));
+    console.log("Replace 'World' with 'JS':", str.replace('World', 'JS'));
+    console.log("Split by comma:", str.split(','));
+  }
+</script>
+
+</body>
+</html>

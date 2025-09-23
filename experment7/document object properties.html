@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document Object Example</title>
+</head>
+<body>
+
+<h1 id="header">Original Heading</h1>
+<button onclick="changeContent()">Change Content</button>
+
+<script>
+  function changeContent() {
+    // Access document title
+    console.log("Document title:", document.title);
+
+    // Change title
+    document.title = "New Document Title";
+
+    // Change content of an element by id
+    const header = document.getElementById('header');
+    header.textContent = "Heading Changed by JavaScript";
+
+    // Create a new paragraph and append it
+    const p = document.createElement('p');
+    p.textContent = "This paragraph is added dynamically.";
+    document.body.appendChild(p);
+  }
+</script>
+
+</body>
+</html>

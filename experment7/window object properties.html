@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Window Object Example</title>
+</head>
+<body>
+
+<button onclick="showWindowProperties()">Show Window Properties</button>
+
+<script>
+  function showWindowProperties() {
+    // Alert window width and height
+    alert(`Window size: ${window.innerWidth} x ${window.innerHeight}`);
+
+    // Open a new window
+    const newWindow = window.open('', '', 'width=300,height=200');
+    newWindow.document.write('<p>This is a new popup window!</p>');
+
+    // Set a timeout to close the window after 3 seconds
+    setTimeout(() => {
+      newWindow.close();
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

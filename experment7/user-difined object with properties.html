@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User-defined Object Example</title>
+</head>
+<body>
+
+<button onclick="userDefinedObjectExample()">Show User-defined Object</button>
+
+<script>
+  // Constructor function
+  function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+
+    // Method
+    this.getFullName = function() {
+      return this.firstName + ' ' + this.lastName;
+    };
+
+    // Accessor (getter)
+    Object.defineProperty(this, 'canVote', {
+      get: function() {
+        return this.age >= 18;
+      }
+    });
+  }
+
+  function userDefinedObjectExample() {
+    const person1 = new Person('Alice', 'Johnson', 25);
+    const person2 = new Person('Bob', 'Smith', 16);
+
+    alert(
+      `Person 1: ${person1.getFullName()}, Age: ${person1.age}, Can Vote: ${person1.canVote}\n` +
+      `Person 2: ${person2.getFullName()}, Age: ${person2.age}, Can Vote: ${person2.canVote}`
+    );
+  }
+</script>
+
+</body>
+</html>

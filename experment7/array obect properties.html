@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Array Object Example</title>
+</head>
+<body>
+
+<button onclick="arrayExample()">Run Array Example</button>
+
+<script>
+  function arrayExample() {
+    let fruits = ['Apple', 'Banana', 'Cherry'];
+    
+    console.log("Initial array:", fruits);
+    console.log("Array length:", fruits.length);
+
+    fruits.push('Date'); // Add element at end
+    console.log("After push:", fruits);
+
+    fruits.pop(); // Remove last element
+    console.log("After pop:", fruits);
+
+    fruits.unshift('Apricot'); // Add element at start
+    console.log("After unshift:", fruits);
+
+    fruits.shift(); // Remove first element
+    console.log("After shift:", fruits);
+
+    let joined = fruits.join(' - ');
+    console.log("Joined string:", joined);
+  }
+</script>
+
+</body>
+</html>

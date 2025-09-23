@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Date Object Example</title>
+</head>
+<body>
+
+<button onclick="dateExample()">Run Date Example</button>
+
+<script>
+  function dateExample() {
+    const now = new Date();
+    console.log("Current date and time:", now);
+
+    console.log("Year:", now.getFullYear());
+    console.log("Month (0-11):", now.getMonth());
+    console.log("Date:", now.getDate());
+    console.log("Day of week (0-6):", now.getDay());
+    console.log("Hours:", now.getHours());
+    console.log("Minutes:", now.getMinutes());
+    console.log("Seconds:", now.getSeconds());
+
+    // Create a specific date: Jan 1, 2020
+    const specificDate = new Date(2020, 0, 1);
+    console.log("Specific date:", specificDate);
+
+    // Get timestamp
+    console.log("Timestamp (ms since Jan 1, 1970):", now.getTime());
+  }
+</script>
+
+</body>
+</html>

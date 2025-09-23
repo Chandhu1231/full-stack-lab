@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Regex Example</title>
+</head>
+<body>
+
+<button onclick="regexExample()">Run Regex Example</button>
+
+<script>
+  function regexExample() {
+    const pattern = /hello/i; // case-insensitive 'hello'
+    const text = "Hello there!";
+
+    console.log("Test if 'hello' is in text:", pattern.test(text));
+
+    const result = text.match(pattern);
+    console.log("Matched substring:", result ? result[0] : "No match");
+
+    // Replace 'Hello' with 'Hi'
+    const replaced = text.replace(pattern, 'Hi');
+    console.log("After replace:", replaced);
+
+    // Split string by spaces or punctuation
+    const splitText = text.split(/\W+/);
+    console.log("Split by non-word chars:", splitText);
+  }
+</script>
+
+</body>
+</html>
