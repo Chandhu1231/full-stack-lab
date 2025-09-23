@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Input Methods</title>
+</head>
+<body>
+
+  <h1>Input Examples</h1>
+
+  <!-- Input using prompt -->
+  <button onclick="inputPrompt()">Input via Prompt</button>
+
+  <!-- Input using form elements -->
+  <form onsubmit="return inputForm(event)">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" />
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <p id="formOutput"></p>
+
+  <script>
+    // Using prompt()
+    function inputPrompt() {
+      const userInput = prompt("Please enter your favorite color:");
+      if (userInput) {
+        alert("Your favorite color is " + userInput);
+      }
+    }
+
+    // Using form input element
+    function inputForm(event) {
+      event.preventDefault(); // Prevent form from reloading page
+      const name = document.getElementById("name").value;
+      if (name) {
+        document.getElementById("formOutput").innerText = "Hello, " + name + "!";
+      } else {
+        document.getElementById("formOutput").innerText = "Please enter a name.";
+      }
+      return false;
+    }
+  </script>
+
+</body>
+</html>

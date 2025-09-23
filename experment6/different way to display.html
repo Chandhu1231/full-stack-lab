@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Output Methods</title>
+</head>
+<body>
+
+  <h1>Output Examples</h1>
+
+  <button onclick="displayOutput()">Show Outputs</button>
+
+  <p id="outputDiv"></p>
+
+  <script>
+    function displayOutput() {
+      // 1. alert
+      alert("This is an alert box.");
+
+      // 2. document.write (overwrites the whole document if used after page load)
+      // Here we will comment it out because it erases the page content
+      // document.write("This is document.write output.");
+
+      // 3. console.log (visible in browser developer console)
+      console.log("This message is in the console.");
+
+      // 4. Output to a specific HTML element
+      document.getElementById("outputDiv").innerText = "This text is displayed inside the paragraph tag.";
+    }
+  </script>
+
+</body>
+</html>

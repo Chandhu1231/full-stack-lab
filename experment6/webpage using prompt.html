@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voter Eligibility</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .eligible {
+      color: green;
+      font-weight: bold;
+    }
+
+    .not-eligible {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Voter Eligibility Check</h1>
+  <button onclick="checkVoter()">Enter Voter Info</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkVoter() {
+      const name = prompt("Enter your name:");
+      if (!name) {
+        alert("Name is required!");
+        return;
+      }
+
+      const ageInput = prompt("Enter your age:");
+      const age = Number(ageInput);
+
+      if (isNaN(age) || age <= 0) {
+        alert("Please enter a valid age.");
+        return;
+      }
+
+      const canVote = age >= 18 ? "Yes" : "No";
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Can Vote?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${name}</td>
+              <td>${age}</td>
+              <td class="${canVote === 'Yes' ? 'eligible' : 'not-eligible'}">${canVote}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+    }
+  </script>
+
+</body>
+</html>
