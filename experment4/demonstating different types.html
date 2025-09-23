@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Selector Forms Example</title>
+
+  <style>
+    /* i. Simple Selectors */
+
+    /* Element selector */
+    p {
+      color: darkblue;
+    }
+
+    /* ID selector */
+    #unique {
+      font-weight: bold;
+      color: darkred;
+    }
+
+    /* Class selector */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* Group selector (applies same styles to multiple selectors) */
+    h1, h2, h3 {
+      font-family: 'Arial', sans-serif;
+      color: darkgreen;
+    }
+
+    /* Universal selector */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ii. Combinator Selectors */
+
+    /* Descendant selector: all <span> inside <div> */
+    div span {
+      color: purple;
+    }
+
+    /* Child selector: direct child <li> of <ul> */
+    ul > li {
+      list-style-type: square;
+    }
+
+    /* Adjacent sibling selector: <p> immediately following an <h2> */
+    h2 + p {
+      margin-top: 0;
+      font-style: italic;
+      color: teal;
+    }
+
+    /* General sibling selector: all <p> siblings after <h3> */
+    h3 ~ p {
+      font-size: 0.9em;
+      color: gray;
+    }
+
+    /* iii. Pseudo-class selector */
+
+    /* Change link color on hover */
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+
+    /* iv. Pseudo-element selector */
+
+    /* Add content before paragraphs */
+    p::before {
+      content: "👉 ";
+      color: red;
+    }
+
+    /* v. Attribute selector */
+
+    /* Select input elements with type="text" */
+    input[type="text"] {
+      border: 2px solid green;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Select anchor tags with href starting with https */
+    a[href^="https"] {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Selectors</h1>
+
+  <p>This paragraph is styled by the element selector.</p>
+
+  <p id="unique">This paragraph uses an ID selector.</p>
+
+  <p class="highlight">This paragraph uses a class selector with yellow background.</p>
+
+  <h2>Group selector example: Heading 2</h2>
+  <h3>Group selector example: Heading 3</h3>
+
+  <h1>Combinator Selectors</h1>
+
+  <div>
+    <span>This span is inside a div (descendant selector).</span>
+  </div>
+
+  <ul>
+    <li>List item 1 (child selector)</li>
+    <li>List item 2 (child selector)</li>
+  </ul>
+
+  <h2>Adjacent sibling selector</h2>
+  <p>This paragraph immediately follows an h2 and is italic and teal.</p>
+
+  <h3>General sibling selector</h3>
+  <p>This paragraph is a sibling after an h3 and styled smaller and gray.</p>
+  <p>Another sibling paragraph after the h3.</p>
+
+  <h1>Pseudo-class Selector</h1>
+  <a href="https://example.com">Hover over this link to see the effect</a>
+
+  <h1>Pseudo-element Selector</h1>
+  <p>Notice the arrow before this paragraph, added with ::before pseudo-element.</p>
+
+  <h1>Attribute Selector</h1>
+  <input type="text" placeholder="Input with type='text'" />
+  <input type="password" placeholder="Input with type='password'" />
+
+  <p><a href="https://secure.com">Secure Link (bold)</a></p>
+  <p><a href="http://insecure.com">Insecure Link (normal)</a></p>
+
+</body>
+</html>
