@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Armstrong Number Check</title>
+</head>
+<body>
+
+<button onclick="checkArmstrong()">Check Armstrong Number</button>
+
+<script>
+  function checkArmstrong() {
+    const input = prompt("Enter a number:");
+    const num = Number(input);
+
+    if (isNaN(num) || num < 0) {
+      alert("Please enter a valid positive number.");
+      return;
+    }
+
+    const digits = input.split('');
+    const sum = digits.reduce((acc, digit) => acc + Math.pow(Number(digit), digits.length), 0);
+
+    if (sum === num) {
+      alert(`${num} is an Armstrong number.`);
+    } else {
+      alert(`${num} is NOT an Armstrong number.`);
+    }
+  }
+</script>
+
+</body>
+</html>

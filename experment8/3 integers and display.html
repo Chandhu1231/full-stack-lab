@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Larger Number</title>
+</head>
+<body>
+
+<button onclick="findLarger()">Enter Three Integers</button>
+
+<script>
+  function findLarger() {
+    const num1 = parseInt(prompt("Enter first integer:"));
+    const num2 = parseInt(prompt("Enter second integer:"));
+    const num3 = parseInt(prompt("Enter third integer:"));
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+      alert("Please enter valid integers.");
+      return;
+    }
+
+    if (num1 === num2 && num2 === num3) {
+      alert("EQUAL NUMBERS");
+      document.body.innerHTML += `<p><strong>EQUAL NUMBERS</strong></p>`;
+      return;
+    }
+
+    let max = Math.max(num1, num2, num3);
+    alert(`${max} LARGER NUMBER`);
+    document.body.innerHTML += `<p><strong>${max} LARGER NUMBER</strong></p>`;
+  }
+</script>
+
+</body>
+</html>

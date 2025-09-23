@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop Through Object and Array</title>
+</head>
+<body>
+
+<button onclick="loopExample()">Show Loop Examples</button>
+
+<div id="output"></div>
+
+<script>
+  function loopExample() {
+    const person = {name: "John", age: 30, city: "New York"};
+    const fruits = ["Apple", "Banana", "Cherry"];
+
+    let output = "<h3>for-in loop (object properties):</h3><ul>";
+    for (let key in person) {
+      output += `<li>${key}: ${person[key]}</li>`;
+    }
+    output += "</ul>";
+
+    output += "<h3>forEach loop (array):</h3><ul>";
+    fruits.forEach(fruit => {
+      output += `<li>${fruit}</li>`;
+    });
+    output += "</ul>";
+
+    output += "<h3>for-of loop (array):</h3><ul>";
+    for (let fruit of fruits) {
+      output += `<li>${fruit}</li>`;
+    }
+    output += "</ul>";
+
+    document.getElementById("output").innerHTML = output;
+  }
+</script>
+
+</body>
+</html>

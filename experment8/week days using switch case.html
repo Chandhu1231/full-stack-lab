@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week Days Switch Case</title>
+</head>
+<body>
+
+<button onclick="showWeekDay()">Enter Day Number (1-7)</button>
+
+<script>
+  function showWeekDay() {
+    const dayNum = parseInt(prompt("Enter day number (1 for Sunday, 7 for Saturday):"));
+    let dayName;
+
+    switch(dayNum) {
+      case 1: dayName = "Sunday"; break;
+      case 2: dayName = "Monday"; break;
+      case 3: dayName = "Tuesday"; break;
+      case 4: dayName = "Wednesday"; break;
+      case 5: dayName = "Thursday"; break;
+      case 6: dayName = "Friday"; break;
+      case 7: dayName = "Saturday"; break;
+      default: dayName = "Invalid day number";
+    }
+
+    alert(dayName);
+    document.body.innerHTML += `<p>Day ${dayNum}: <strong>${dayName}</strong></p>`;
+  }
+</script>
+
+</body>
+</html>
